@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 
 // tslint:disable-next-line:no-unused-expression
 injectGlobal`
@@ -27,6 +28,7 @@ class App extends Component {
         <Projects />
         <About />
         <Contact />
+        <Footer />
       </Fragment>
     );
   }
