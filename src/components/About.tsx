@@ -7,8 +7,15 @@ const Wrapper = styled.section`
   margin-top: 10rem;
 `;
 
-const Title = styled.h2`
+const TitleWrapper = styled.div`
   text-align: center;
+`;
+
+const Title = styled.h2`
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #A66FED;
 `;
 
 const Img = styled.img`
@@ -18,10 +25,12 @@ const Img = styled.img`
 const Text = styled.p`
   text-indent: 1em;
   text-align: justify;
+  margin: 3em 0;
+  padding: 0;
 `;
 
 const StackWrapper = styled.div`
-  margin-top: 5rem;
+  margin-top: 2em;
 `;
 
 const Anchor = styled.a`
@@ -35,7 +44,9 @@ const About = () => {
   return (
     <Wrapper>
       <Anchor id="about" />
-      <Title> About </Title>
+      <TitleWrapper>
+        <Title> About </Title>
+      </TitleWrapper>
       <Text> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente libero quod facilis mollitia saepe odit nisi dolore repellat iure. Aliquam ex tenetur molestiae delectus id molestias veritatis impedit laudantium consequatur? </Text>
       <StackWrapper>
         <h3> Tech Stack </h3>

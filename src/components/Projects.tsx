@@ -10,7 +10,10 @@ const Wrapper = styled.section`
 `;
 
 const Title = styled.h2`
-  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #A66FED;
 `;
 
 const Anchor = styled.a`
@@ -20,11 +23,17 @@ const Anchor = styled.a`
   visibility: hidden;
 `;
 
+const TitleWrapper = styled.div`
+  text-align: center;
+`;
+
 const Projects = () => {
   return (
     <Wrapper>
       <Anchor id="projects" />
-      <Title> Projects </Title>
+      <TitleWrapper>
+        <Title> Projects </Title>
+      </TitleWrapper>
       {projects.map((project, i) => <Project key={i} {...project} />)}
     </Wrapper>
   );
