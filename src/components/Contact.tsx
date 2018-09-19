@@ -7,13 +7,21 @@ const Wrapper = styled.section`
   margin-top: 10rem;
 `;
 
-const Title = styled.h2`
+const TitleWrapper = styled.div`
   text-align: center;
+`;
+
+const Title = styled.h2`
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #A66FED;
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-top: 3em;
 `;
 
 const HalfWrapper = styled.div`
@@ -27,7 +35,6 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
-  /* justify-content: space-around; */
   flex-wrap: wrap;
   height: 100%;
   align-items: center;
@@ -35,8 +42,6 @@ const List = styled.ul`
 
 const ListItems = styled.li`
   width: 100%;
-  /* justify-content: space-between; */
-  /* justify-content: space-around; */
 `;
 
 const FormLabels = styled.label`
@@ -85,7 +90,9 @@ const Contact = () => {
   return (
     <Wrapper>
       <Anchor id="contact" />
-      <Title> Contact </Title>
+      <TitleWrapper>
+        <Title> Contact </Title>
+      </TitleWrapper>
       <ContentWrapper>
         <HalfWrapper>
           <List>
