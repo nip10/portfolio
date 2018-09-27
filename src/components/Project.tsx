@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import extlink from './../assets/img/external-link.svg';
+import github from './../assets/img/github.svg';
 
 interface IProjectProps {
   title: string,
   description: string,
   stack: string[],
   image: string,
+  repo: string,
+  demo: string,
 };
 
 const Wrapper = styled.div`
@@ -40,22 +44,22 @@ const TagsList = styled.ul`
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 80px;
+  bottom: 85px;
 `;
 
 const TagsItem = styled.li`
   display: inline-block;
   border: 1px solid #74A4F7;
-  margin-right: 1em;
   padding: 0.5em 1em;
+  margin: 0.5em 1em 0 0;
 `;
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
 `;
 
-const DemoButton = styled.button`
+const DemoButton = styled.a`
   background-color: #8A74F7;
   padding: 1em 2em;
   color: white;
@@ -63,20 +67,26 @@ const DemoButton = styled.button`
   font-weight: 700;
   box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
   margin-right: 1em;
-  cursor: pointer;
+  text-decoration: none;
 `;
 
-const SourceButton = styled.button`
+const SourceButton = styled.a`
   background-color: white;
   padding: 1em 2em;
   color: #8A74F7;
   border: none;
   font-weight: 700;
   box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
-  cursor: pointer;
+  text-decoration: none;
 `;
 
-const Project: React.SFC<IProjectProps> = ({ title, description, stack, image }) => {
+const ButtonImg = styled.img`
+  max-width: 2rem;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+`;
+
+const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, repo, demo }) => {
   return (
     <Wrapper>
       <ImgWrapper>
@@ -89,8 +99,14 @@ const Project: React.SFC<IProjectProps> = ({ title, description, stack, image })
           {stack.map((el, i) => <TagsItem key={i}> {el} </TagsItem>)}
         </TagsList>
         <ButtonWrapper>
-          <DemoButton> Demo </DemoButton>
-          <SourceButton> Source </SourceButton>
+          <DemoButton href={demo} target="_blank" rel="noopener noreferrer">
+            <ButtonImg src={extlink} alt="" />
+            <span> Demo </span>
+          </DemoButton>
+          <SourceButton href={repo} target="_blank" rel="noopener noreferrer">
+            <ButtonImg src={github} alt="" />
+            <span> Source </span>
+          </SourceButton>
         </ButtonWrapper>
       </TextWrapper>
     </Wrapper>
