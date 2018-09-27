@@ -1,20 +1,42 @@
 export const projects = [
   {
-    title: 'Some title',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A iste rem, quam, aut distinctio mollitia cupiditate maiores hic cum suscipit, tempore vel at ipsum expedita officia quos animi atque eos.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'MongoDB'],
-    image: 'https://via.placeholder.com/250x300'
+    title: 'Todo api',
+    description: 'A RESTful API for managing todo\'s using all CRUD common operations.',
+    stack: ['JavaScript', 'Typescript', 'NodeJS', 'Express', 'MongoDB', 'Jest'],
+    image: 'https://via.placeholder.com/250x300',
+    repo: 'https://github.com/nip10/todo-api',
+    demo: '',
   },
   {
-    title: 'Some title',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A iste rem, quam, aut distinctio mollitia cupiditate maiores hic cum suscipit, tempore vel at ipsum expedita officia quos animi atque eos.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'React'],
-    image: 'https://via.placeholder.com/250x300'
+    title: 'Todo\'s Manager',
+    description: 'Front-end for managing todo\'s.',
+    stack: ['HTML5', 'CSS3', 'Typescript', 'React'],
+    image: 'https://via.placeholder.com/250x300',
+    repo: 'https://github.com/nip10/todo-react-ts',
+    demo: '',
   },
   {
-    title: 'Some title',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. A iste rem, quam, aut distinctio mollitia cupiditate maiores hic cum suscipit, tempore vel at ipsum expedita officia quos animi atque eos.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'React', 'PostgreSQL'],
-    image: 'https://via.placeholder.com/250x300'
+    title: 'Chat',
+    description: 'Simple chat webapp.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'Express', 'SocketIO'],
+    image: 'https://via.placeholder.com/250x300',
+    repo: 'https://github.com/nip10/node-chat-app',
+    demo: '',
+  },
+  {
+    title: 'TSM - TvShow Manager',
+    description: 'Manage your favourite tvshows and discover new ones. Relies on the TheTVDB API to get tvshow\'s information.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'PostgreSQL', 'Express', 'SocketIO'],
+    image: 'https://via.placeholder.com/250x300',
+    repo: 'https://github.com/nip10/tvshows-manager',
+    demo: '',
+  },
+  {
+    title: 'Telegram Bot',
+    description: 'A Telegram bot that provides weather information. Location can be manually inputted or using the device\'s location. Users can add locations as favourites for a better experience.',
+    stack: ['Javascript', 'Express', 'NodeJS'],
+    image: 'https://via.placeholder.com/250x300',
+    repo: 'https://github.com/nip10/telegram-bot',
+    demo: '',
   },
 ];
