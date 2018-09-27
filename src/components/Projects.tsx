@@ -32,7 +32,7 @@ const Projects = () => {
     <Wrapper>
       <Anchor id="projects" />
       <TitleWrapper>
-        <Title> Projects </Title>
+        <Title> {'< Projects />'} </Title>
       </TitleWrapper>
       {projects.map((project, i) => <Project key={i} {...project} />)}
     </Wrapper>

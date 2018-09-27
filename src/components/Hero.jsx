@@ -14,8 +14,8 @@ const HeroContainer = styled.section`
 
 const HeroOverlay = styled.div`
   position: absolute;
-  top: 200px;
-  left: 500px;
+  top: 260px;
+  left: 360px;
   margin: auto;
   color: white;
 `;
