@@ -14,6 +14,8 @@ const Wrapper = styled.section`
 const Text = styled.h3`
   margin: 0;
   padding: 0;
+  border-top: 2px solid rgba(166,111,237,.3);
+  padding-top: 1rem;
 `;
 
 const Footer = () => {
