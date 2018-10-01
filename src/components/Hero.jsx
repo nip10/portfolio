@@ -23,7 +23,6 @@ const HeroOverlay = styled.div`
   left: 360px;
   margin: auto;
   color: white;
-  /* TODO: Fix positioning */
   @media (max-width: 1024px) {
     top: 60%;
     left: 5%;
@@ -40,15 +39,24 @@ const Hero = () => (
           : <Particles style={particlesStyle} params={particlesCfgMobile} />
       }}
     </MediaQuery>
-    {/* <Particles style={particlesStyle} params={particlesCfg} /> */}
     <HeroOverlay>
-      <Typing>
-        <span>Hi, I'm <strong>Diogo</strong>.</span>
-        <br />
-        <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
-        {/* <br />
-        <span>Currently in the final-year of a master's degree in Electrical and Computers Engineering at FEUP.</span> */}
-      </Typing>
+      <MediaQuery minWidth={1024}>
+        {matches => {
+          return matches
+            ? <Typing>
+              <span>Hi, I'm <strong>Diogo</strong>.</span>
+              <br />
+              <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
+              <br />
+              <span>Currently in the final-year of a master's degree in Electrical and Computers Engineering at FEUP.</span>
+            </Typing>
+            : <Typing>
+              <span>Hi, I'm <strong>Diogo</strong>.</span>
+              <br />
+              <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
+            </Typing>
+        }}
+      </MediaQuery>
     </HeroOverlay>
   </HeroContainer>
 );
