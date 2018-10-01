@@ -22,7 +22,7 @@ const Wrapper = styled.nav<IWrapperProps>`
   box-sizing: border-box;
   box-shadow: ${p => (p.scrolled ? '0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)' : 'none')};
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 0 10%;
   }
 `;

@@ -8,6 +8,9 @@ const Wrapper = styled.section`
   margin: 0 auto;
   margin-top: 12rem;
   padding: 0 1em;
+  @media (max-width: 1024px) {
+    margin-top: 4rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -26,6 +29,7 @@ const Anchor = styled.a`
 
 const TitleWrapper = styled.div`
   text-align: center;
+  margin-bottom: 3rem;
 `;
 
 const Projects = () => {

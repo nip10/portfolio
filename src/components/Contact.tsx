@@ -29,7 +29,7 @@ const ContentWrapper = styled.div`
   margin-top: 3em;
   grid-template-columns: 50% 50%;
   grid-template-areas: "social form";
-  @media (max-width: 1042px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 100%;
     grid-template-areas: "form" "social";
   }
