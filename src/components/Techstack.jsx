@@ -114,8 +114,8 @@ const TechStackMobile = () => {
       <StackListItem> redis </StackListItem>
       <StackList> <BulletEnt>&bull;</BulletEnt> Tools </StackList>
       <StackListItem> Github </StackListItem>
-      <StackListItem> NPM </StackListItem>
-      <StackListItem> yarn </StackListItem>
+      <StackListItem> npm </StackListItem>
+      <StackListItem> Yarn </StackListItem>
       <StackListItem> Gulp </StackListItem>
       <StackListItem> Webpack </StackListItem>
       <StackListItem> Jest </StackListItem>
@@ -130,25 +130,25 @@ const TechStackDesktop = () => {
       <h4> <BulletEnt>&bull;</BulletEnt> Languages </h4>
       <StackRow>
         <ImgContainer>
-          <Img src={javascript} alt="TODO: some tech logo" />
+          <Img src={javascript} alt="javascript logo" />
           <ImgOverlay>
             <ImgOverlayText> JavaScript </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={ts} alt="TODO: some tech logo" />
+          <Img src={ts} alt="ts logo" />
           <ImgOverlay>
             <ImgOverlayText> TypeScript </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={cplusplus} alt="TODO: some tech logo" />
+          <Img src={cplusplus} alt="cplusplus logo" />
           <ImgOverlay>
             <ImgOverlayText> C++ </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={matlab} alt="TODO: some tech logo" />
+          <Img src={matlab} alt="matlab logo" />
           <ImgOverlay>
             <ImgOverlayText> MATLAB </ImgOverlayText>
           </ImgOverlay>
@@ -157,37 +157,37 @@ const TechStackDesktop = () => {
       <h4> <BulletEnt>&bull;</BulletEnt> Front-end </h4>
       <StackRow>
         <ImgContainer>
-          <Img src={html5} alt="TODO: some tech logo" />
+          <Img src={html5} alt="html5 logo" />
           <ImgOverlay>
             <ImgOverlayText> HTML5 </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={css3} alt="TODO: some tech logo" />
+          <Img src={css3} alt="css3 logo" />
           <ImgOverlay>
             <ImgOverlayText> CSS3 </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={sass} alt="TODO: some tech logo" />
+          <Img src={sass} alt="sass logo" />
           <ImgOverlay>
             <ImgOverlayText> Sass </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={r} alt="TODO: some tech logo" />
+          <Img src={r} alt="react logo" />
           <ImgOverlay>
             <ImgOverlayText> React </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={redux} alt="TODO: some tech logo" />
+          <Img src={redux} alt="redux logo" />
           <ImgOverlay>
             <ImgOverlayText> Redux </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={iojs} alt="TODO: some tech logo" />
+          <Img src={iojs} alt="iojs logo" />
           <ImgOverlay>
             <ImgOverlayText> SocketIO </ImgOverlayText>
           </ImgOverlay>
@@ -196,25 +196,25 @@ const TechStackDesktop = () => {
       <h4> <BulletEnt>&bull;</BulletEnt> Back-end </h4>
       <StackRow>
         <ImgContainer>
-          <Img src={node} alt="TODO: some tech logo" />
+          <Img src={node} alt="node logo" />
           <ImgOverlay>
             <ImgOverlayText> Node.js </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={mongodb} alt="TODO: some tech logo" />
+          <Img src={mongodb} alt="mongodb logo" />
           <ImgOverlay>
             <ImgOverlayText> MongoDB </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={postgres} alt="TODO: some tech logo" />
+          <Img src={postgres} alt="postgresql logo" />
           <ImgOverlay>
             <ImgOverlayText> PostgreSQL </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={redis} alt="TODO: some tech logo" />
+          <Img src={redis} alt="redis logo" />
           <ImgOverlay>
             <ImgOverlayText> redis </ImgOverlayText>
           </ImgOverlay>
@@ -223,37 +223,37 @@ const TechStackDesktop = () => {
       <h4> <BulletEnt>&bull;</BulletEnt> Tools </h4>
       <StackRow>
         <ImgContainer>
-          <Img src={github} alt="TODO: some tech logo" />
+          <Img src={github} alt="github logo" />
           <ImgOverlay>
             <ImgOverlayText> Github </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={npm} alt="TODO: some tech logo" />
+          <Img src={npm} alt="npm logo" />
           <ImgOverlay>
-            <ImgOverlayText> NPM </ImgOverlayText>
+            <ImgOverlayText> npm </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={yarn} alt="TODO: some tech logo" />
+          <Img src={yarn} alt="yarn logo" />
           <ImgOverlay>
-            <ImgOverlayText> yarn </ImgOverlayText>
+            <ImgOverlayText> Yarn </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={gulp} alt="TODO: some tech logo" />
+          <Img src={gulp} alt="gulp logo" />
           <ImgOverlay>
             <ImgOverlayText> Gulp </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={webpack} alt="TODO: some tech logo" />
+          <Img src={webpack} alt="webpack logo" />
           <ImgOverlay>
             <ImgOverlayText> Webpack </ImgOverlayText>
           </ImgOverlay>
         </ImgContainer>
         <ImgContainer>
-          <Img src={jest} alt="TODO: some tech logo" />
+          <Img src={jest} alt="jest logo" />
           <ImgOverlay>
             <ImgOverlayText> Jest </ImgOverlayText>
           </ImgOverlay>

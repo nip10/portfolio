@@ -130,11 +130,11 @@ const Contact = () => {
       <ContentWrapper>
         <SocialList>
           <SocialListItems>
-            <SocialImg src={github} alt="TODO: social name" />
+            <SocialImg src={github} alt="github logo" />
             <SocialLink href="#"> Github </SocialLink>
           </SocialListItems>
           <SocialListItems>
-            <SocialImg src={linkedin} alt="TODO: social name" />
+            <SocialImg src={linkedin} alt="linkedin logo" />
             <SocialLink href="#"> Linkedin </SocialLink>
           </SocialListItems>
         </SocialList>

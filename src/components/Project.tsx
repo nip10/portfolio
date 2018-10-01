@@ -129,10 +129,10 @@ const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, r
         <ButtonWrapper>
           <DemoButton href={demo} target="_blank" rel="noopener noreferrer">
             <span> Demo </span>
-            <DemoBtnImg src={extlink} alt="" />
+            <DemoBtnImg src={extlink} alt="external link icon" />
           </DemoButton>
           <SourceButton href={repo} target="_blank" rel="noopener noreferrer">
-            <SourceBtnImg src={github} alt="" />
+            <SourceBtnImg src={github} alt="github logo" />
             <span> Source </span>
           </SourceButton>
         </ButtonWrapper>
