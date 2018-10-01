@@ -10,9 +10,7 @@ const Wrapper = styled.nav<IWrapperProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 15%;
-  height: 70px;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -23,7 +21,7 @@ const Wrapper = styled.nav<IWrapperProps>`
   box-shadow: ${p => (p.scrolled ? '0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)' : 'none')};
   flex-wrap: wrap;
   @media (max-width: 1024px) {
-    padding: 0 10%;
+    padding: 1rem;
   }
 `;
 
@@ -32,7 +30,6 @@ const Title = styled.a`
   font-size: 1.25rem;
   margin: 0;
   padding: 0;
-  /* padding-top: 1.25rem; */
   font-weight: 700;
 `;
 
