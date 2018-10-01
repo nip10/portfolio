@@ -4,9 +4,10 @@ import { projects } from './../projects/index';
 import Project from './Project';
 
 const Wrapper = styled.section`
-  width: 65%;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 12rem;
+  padding: 0 1em;
 `;
 
 const Title = styled.h2`

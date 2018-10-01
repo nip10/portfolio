@@ -4,9 +4,13 @@ import github from "./../assets/img/github.svg";
 import linkedin from "./../assets/img/linkedin.svg";
 
 const Wrapper = styled.section`
-  width: 65%;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 10rem;
+  padding: 0 1em;
+  @media (max-width: 1024px) {
+    margin-top: 5rem;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -21,15 +25,14 @@ const Title = styled.h2`
 `;
 
 const ContentWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
+  display: grid;
   margin-top: 3em;
-`;
-
-const HalfWrapper = styled.div`
-  width: 40%;
-  display: inline-block;
-  text-align: center;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "social form";
+  @media (max-width: 1042px) {
+    grid-template-columns: 100%;
+    grid-template-areas: "form" "social";
+  }
 `;
 
 const SocialList = styled.ul`
@@ -40,6 +43,11 @@ const SocialList = styled.ul`
   flex-wrap: wrap;
   height: 100%;
   align-items: center;
+  grid-area: "social";
+  @media (max-width: 1024px) {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
 `;
 
 const SocialListItems = styled.li`
@@ -101,8 +109,15 @@ const Anchor = styled.a`
 `;
 
 const SocialImg = styled.img`
-    max-width: 50px;
-    width: 100%;
+  max-width: 50px;
+  width: 100%;
+`;
+
+const Form = styled.form`
+  grid-area: "form";
+  @media (max-width: 1024px) {
+    margin-top: 3rem;
+  }
 `;
 
 const Contact = () => {
@@ -113,29 +128,25 @@ const Contact = () => {
         <Title> {'< Contact />'} </Title>
       </TitleWrapper>
       <ContentWrapper>
-        <HalfWrapper>
-          <SocialList>
-            <SocialListItems>
-              <SocialImg src={github} alt="TODO: social name" />
-              <SocialLink href="#"> Github </SocialLink>
-            </SocialListItems>
-            <SocialListItems>
-              <SocialImg src={linkedin} alt="TODO: social name" />
-              <SocialLink href="#"> Linkedin </SocialLink>
-            </SocialListItems>
-          </SocialList>
-        </HalfWrapper>
-        <HalfWrapper>
-          <form action="">
-            <FormLabels htmlFor="name"> Name: </FormLabels>
-            <FormInputs type="text" id="name" />
-            <FormLabels htmlFor="email"> Email: </FormLabels>
-            <FormInputs type="email" id="email" required={true} />
-            <FormLabels htmlFor="message"> Message: </FormLabels>
-            <FormTextarea id="message" rows={5} defaultValue="" required={true} />
-            <FormSubmitButton type="submit"> Submit </FormSubmitButton>
-          </form>
-        </HalfWrapper>
+        <SocialList>
+          <SocialListItems>
+            <SocialImg src={github} alt="TODO: social name" />
+            <SocialLink href="#"> Github </SocialLink>
+          </SocialListItems>
+          <SocialListItems>
+            <SocialImg src={linkedin} alt="TODO: social name" />
+            <SocialLink href="#"> Linkedin </SocialLink>
+          </SocialListItems>
+        </SocialList>
+        <Form action="">
+          <FormLabels htmlFor="name"> Name: </FormLabels>
+          <FormInputs type="text" id="name" />
+          <FormLabels htmlFor="email"> Email: </FormLabels>
+          <FormInputs type="email" id="email" required={true} />
+          <FormLabels htmlFor="message"> Message: </FormLabels>
+          <FormTextarea id="message" rows={5} defaultValue="" required={true} />
+          <FormSubmitButton type="submit"> Submit </FormSubmitButton>
+        </Form>
       </ContentWrapper>
     </Wrapper >
   );

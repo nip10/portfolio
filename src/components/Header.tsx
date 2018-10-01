@@ -7,6 +7,9 @@ interface IWrapperProps {
 }
 
 const Wrapper = styled.nav<IWrapperProps>`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 0 15%;
   height: 70px;
@@ -18,6 +21,10 @@ const Wrapper = styled.nav<IWrapperProps>`
   background-color: #F6F9FC;
   box-sizing: border-box;
   box-shadow: ${p => (p.scrolled ? '0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)' : 'none')};
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    padding: 0 10%;
+  }
 `;
 
 const Title = styled.a`
@@ -25,7 +32,7 @@ const Title = styled.a`
   font-size: 1.25rem;
   margin: 0;
   padding: 0;
-  padding-top: 1.25rem;
+  /* padding-top: 1.25rem; */
   font-weight: 700;
 `;
 
