@@ -91,7 +91,7 @@ const StackListItem = styled.li`
   padding: 0;
 `;
 
-const TechStackDesktop = () => {
+const TechStackMobile = () => {
   return (
     <StackWrapper>
       <h3> Technical Skills </h3>
@@ -123,7 +123,7 @@ const TechStackDesktop = () => {
   );
 };
 
-const TechStackMobile = () => {
+const TechStackDesktop = () => {
   return (
     <StackWrapper>
       <h3> Technical Skills </h3>
@@ -268,8 +268,8 @@ const Techstack = () => {
     <MediaQuery minWidth={1024}>
       {matches => {
         return matches
-          ? TechStackMobile()
-          : TechStackDesktop()
+          ? TechStackDesktop()
+          : TechStackMobile()
       }}
     </MediaQuery>
   );
