@@ -144,8 +144,8 @@ const Contact = () => {
           <FormLabels htmlFor="email"> Email: </FormLabels>
           <FormInputs type="email" id="email" required={true} />
           <FormLabels htmlFor="message"> Message: </FormLabels>
-          <FormTextarea id="message" rows={5} defaultValue="" required={true} />
-          <FormSubmitButton type="submit"> Submit </FormSubmitButton>
+          <FormTextarea id="message" rows={5} defaultValue="This feature is not implemented yet. If you want to reach out, contact me via Linkedin." required={true} />
+          <FormSubmitButton type="submit" disabled={true}> Submit </FormSubmitButton>
         </Form>
       </ContentWrapper>
     </Wrapper >
