@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 import cplusplus from "./../assets/img/cplusplus.svg";
 import css3 from "./../assets/img/css3.svg";
@@ -77,7 +78,52 @@ const ImgOverlayText = styled.p`
   text-align: center;
 `;
 
-const Techstack = () => {
+const StackList = styled.ul`
+  margin: 1rem 0 0 1rem;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+`;
+
+const StackListItem = styled.li`
+  list-style: none;
+  margin: 0.25rem 0 0 2rem;
+  padding: 0;
+`;
+
+const TechStackDesktop = () => {
+  return (
+    <StackWrapper>
+      <h3> Technical Skills </h3>
+      <StackList> <BulletEnt>&bull;</BulletEnt> Languages </StackList>
+      <StackListItem> JavaScript </StackListItem>
+      <StackListItem> TypeScript </StackListItem>
+      <StackListItem> C++ </StackListItem>
+      <StackListItem> MATLAB </StackListItem>
+      <StackList> <BulletEnt>&bull;</BulletEnt> Front-end </StackList>
+      <StackListItem> HTML5 </StackListItem>
+      <StackListItem> CSS3 </StackListItem>
+      <StackListItem> Sass </StackListItem>
+      <StackListItem> React </StackListItem>
+      <StackListItem> Redux </StackListItem>
+      <StackListItem> SocketIO </StackListItem>
+      <StackList> <BulletEnt>&bull;</BulletEnt> Back-end </StackList>
+      <StackListItem> Node </StackListItem>
+      <StackListItem> MongoDB </StackListItem>
+      <StackListItem> PostgreSQL </StackListItem>
+      <StackListItem> redis </StackListItem>
+      <StackList> <BulletEnt>&bull;</BulletEnt> Tools </StackList>
+      <StackListItem> Github </StackListItem>
+      <StackListItem> NPM </StackListItem>
+      <StackListItem> yarn </StackListItem>
+      <StackListItem> Gulp </StackListItem>
+      <StackListItem> Webpack </StackListItem>
+      <StackListItem> Jest </StackListItem>
+    </StackWrapper>
+  );
+};
+
+const TechStackMobile = () => {
   return (
     <StackWrapper>
       <h3> Technical Skills </h3>
@@ -214,6 +260,18 @@ const Techstack = () => {
         </ImgContainer>
       </StackRow>
     </StackWrapper>
+  );
+};
+
+const Techstack = () => {
+  return (
+    <MediaQuery minWidth={1024}>
+      {matches => {
+        return matches
+          ? TechStackMobile()
+          : TechStackDesktop()
+      }}
+    </MediaQuery>
   );
 };
 
