@@ -16,12 +16,14 @@ const Wrapper = styled.nav<IWrapperProps>`
   top: 0;
   left: 0;
   right: 0;
+  height: 70px;
   background-color: #F6F9FC;
   box-sizing: border-box;
   box-shadow: ${p => (p.scrolled ? '0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)' : 'none')};
   flex-wrap: wrap;
   @media (max-width: 1024px) {
     padding: 1rem;
+    height: auto;
   }
 `;
 

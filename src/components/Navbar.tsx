@@ -11,7 +11,6 @@ const NavList = styled.ul`
   width: 300px;
   margin: 0;
   padding: 0;
-  padding-top: 1.5rem;
 `;
 
 const NavItem = styled.li`
