@@ -131,11 +131,11 @@ const Contact = () => {
         <SocialList>
           <SocialListItems>
             <SocialImg src={github} alt="github logo" />
-            <SocialLink href="#"> Github </SocialLink>
+            <SocialLink href="https://github.com/nip10" target="_blank" rel="noopener noreferrer"> Github </SocialLink>
           </SocialListItems>
           <SocialListItems>
             <SocialImg src={linkedin} alt="linkedin logo" />
-            <SocialLink href="#"> Linkedin </SocialLink>
+            <SocialLink href="https://www.linkedin.com/in/diogo-cardoso-30a065159/" target="_blank" rel="noopener noreferrer"> Linkedin </SocialLink>
           </SocialListItems>
         </SocialList>
         <Form action="">
