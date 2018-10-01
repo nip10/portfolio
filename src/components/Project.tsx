@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import extlink from './../assets/img/external-link.svg';
-import github from './../assets/img/github.svg';
+import github from './../assets/img/github_btn.svg';
 
 interface IProjectProps {
   title: string,
