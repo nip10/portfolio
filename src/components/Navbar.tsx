@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 import MenuIcon from './MenuIcon';
 
 const NavList = styled.ul`
@@ -38,27 +39,20 @@ const NavLink = styled.a`
 `;
 
 const NavListMobile = styled.ul`
-  float: right;
   list-style: none;
-  display: ${(props: INavListMobileProps) => props.toggle ? 'flex' : 'none'};
-  justify-content: space-between;
-  width: 300px;
+  display: ${(props: INavListMobileProps) => props.toggle ? 'block' : 'none'};
   margin: 0;
-  margin-top: 1em;
   padding: 0;
-  flex-wrap: wrap;
-  background-color: #ccc;
+  padding-top: 1rem;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
 `;
 
 const NavItemMobile = styled.li`
   margin: 0;
-  padding: 0;
-  height: 25px;
-  width: 100%;
+  padding: 0.5rem 0;
   text-align: center;
-  :hover {
-    border-bottom: 2px solid #A66FED;
-  }
 `;
 
 const NavLinkMobile = styled.a`
@@ -93,26 +87,26 @@ class Navbar extends Component<{}, INavBarState> {
     }
   }
 
-  private isMobile = () => window.matchMedia('(max-width: 768px)');
-
   private toggleNavList = () => {
-    console.log('clicked');
     this.setState((prevState) => ({ toggle: !prevState.toggle }))
   }
 
   private navMobile = () => {
     return (
-      <NavListMobile toggle={this.state.toggle}>
-        <NavItemMobile>
-          <NavLinkMobile href='#projects'> Projects </NavLinkMobile>
-        </NavItemMobile>
-        <NavItemMobile>
-          <NavLinkMobile href='#about'> About </NavLinkMobile>
-        </NavItemMobile>
-        <NavItemMobile>
-          <NavLinkMobile href='#contact'> Contact </NavLinkMobile>
-        </NavItemMobile>
-      </NavListMobile>
+      <Fragment>
+        <MenuIcon toggleNavList={this.toggleNavList} />
+        <NavListMobile toggle={this.state.toggle}>
+          <NavItemMobile>
+            <NavLinkMobile href='#projects' onClick={this.toggleNavList}> Projects </NavLinkMobile>
+          </NavItemMobile>
+          <NavItemMobile>
+            <NavLinkMobile href='#about' onClick={this.toggleNavList}> About </NavLinkMobile>
+          </NavItemMobile>
+          <NavItemMobile>
+            <NavLinkMobile href='#contact' onClick={this.toggleNavList}> Contact </NavLinkMobile>
+          </NavItemMobile>
+        </NavListMobile>
+      </Fragment>
     );
   };
 
@@ -134,10 +128,13 @@ class Navbar extends Component<{}, INavBarState> {
 
   public render() {
     return (
-      <Fragment>
-        <MenuIcon toggleNavList={this.toggleNavList} />
-        {this.isMobile ? this.navMobile() : this.navDesktop()}
-      </Fragment>
+      <MediaQuery minWidth={1024}>
+        {matches => {
+          return matches
+            ? this.navDesktop()
+            : this.navMobile()
+        }}
+      </MediaQuery>
     );
   }
 }
