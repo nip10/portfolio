@@ -1,0 +1,24 @@
+☐ Change Navbar/Header components names
+☐ Max width should be set on the root div, not in every section.
+  const Wrapper = styled.section`
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 12rem;
+  `;
+☐ Merge buttons styles
+☐ Add email to contacts
+☐ Update readme
+☐ Refactor UI components
+✔ Remove metadata from svgs @done(18-09-27 22:31)
+✘ Write some tests ? @cancelled(18-10-01 22:52)
+✔ Add responsiveness @done(18-10-01 22:52)
+✘ Add "more info" to the projects description that links to the repo's readme @cancelled(18-10-01 22:52)
+✔ Make all media queries uniform 1024px @done(18-10-01 12:43)
+✔ Check if more breakpoints are needed @done(18-10-01 22:52)
+✔ Add react responsive to the navbar toggle hamburgen icon @done(18-10-01 22:52)
+✔ Fix github svg color @done(18-10-01 22:52)
+  ✔ Should be purple on the button @done(18-10-01 22:52)
+  ✔ Should be black elsewhere @done(18-10-01 22:52)
+✔ Fix particle js performance issues on mobile @done(18-10-01 12:42)
+  ✔ Reduce number of particles @done(18-10-02 18:19)
+✔ Remove comments @done(18-10-01 22:52)
