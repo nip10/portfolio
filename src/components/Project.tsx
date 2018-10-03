@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import extlink from './../assets/img/external-link.svg';
-import github from './../assets/img/github_btn.svg';
+import { Button, ButtonImg } from './UI/index';
+import extlink from './../assets/img/icons/external-link.svg';
+import github from './../assets/img/icons/github_btn.svg';
 
 interface IProjectProps {
   title: string,
@@ -9,7 +10,7 @@ interface IProjectProps {
   stack: string[],
   image: string,
   repo: string,
-  demo: string,
+  demo?: string,
 };
 
 const Wrapper = styled.div`
@@ -71,41 +72,9 @@ const TagsItem = styled.li`
 
 const ButtonWrapper = styled.div`
   margin-bottom: 1rem;
-`;
-
-const DemoButton = styled.a`
-  background-color: #8A74F7;
-  padding: 0.8em 1em;
-  color: white;
-  border: none;
-  font-weight: 700;
-  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
-  margin-right: 1em;
-  text-decoration: none;
-  font-size: 0.9rem;
-`;
-
-const SourceButton = styled.a`
-  background-color: white;
-  padding: 0.8em 1em;
-  color: #8A74F7;
-  border: none;
-  font-weight: 700;
-  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
-  text-decoration: none;
-  font-size: 0.9rem;
-`;
-
-const DemoBtnImg = styled.img`
-  max-width: 1.5rem;
-  vertical-align: middle;
-  padding-left: 0.5rem;
-`;
-
-const SourceBtnImg = styled.img`
-  max-width: 1.5rem;
-  vertical-align: middle;
-  padding-right: 0.5rem;
+  & :not(:last-child) {
+    margin-right: 1rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -127,14 +96,18 @@ const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, r
           {stack.map((el, i) => <TagsItem key={i}> {el} </TagsItem>)}
         </TagsList>
         <ButtonWrapper>
-          <DemoButton href={demo} target="_blank" rel="noopener noreferrer">
-            <span> Demo </span>
-            <DemoBtnImg src={extlink} alt="external link icon" />
-          </DemoButton>
-          <SourceButton href={repo} target="_blank" rel="noopener noreferrer">
-            <SourceBtnImg src={github} alt="github logo" />
-            <span> Source </span>
-          </SourceButton>
+          {demo &&
+            <Button type={'primary'} href={demo} target="_blank" rel="noopener noreferrer">
+              <span> Demo </span>
+              <ButtonImg left={0.5} src={extlink} alt="external link icon" />
+            </Button>
+          }
+          {repo &&
+            <Button type={'secondary'} href={repo} target="_blank" rel="noopener noreferrer">
+              <ButtonImg right={0.5} src={github} alt="github logo" />
+              <span> Source </span>
+            </Button>
+          }
         </ButtonWrapper>
       </TextWrapper>
     </Wrapper>
