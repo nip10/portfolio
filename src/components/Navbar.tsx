@@ -27,6 +27,7 @@ const NavLink = styled.a`
   padding: 0;
   text-decoration: none;
   color: black;
+  vertical-align: middle;
   :before {
     color: #A66FED;
     content: "{"
@@ -52,22 +53,6 @@ const NavItemMobile = styled.li`
   margin: 0;
   padding: 0.5rem 0;
   text-align: center;
-`;
-
-const NavLinkMobile = styled.a`
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  color: black;
-  vertical-align: middle;
-  :before {
-    color: #A66FED;
-    content: "{"
-  }
-  :after {
-    color: #A66FED;
-    content: "}"
-  }
 `;
 
 interface INavBarState {
@@ -96,13 +81,13 @@ class Navbar extends Component<{}, INavBarState> {
         <MenuIcon toggleNavList={this.toggleNavList} />
         <NavListMobile toggle={this.state.toggle}>
           <NavItemMobile>
-            <NavLinkMobile href='#projects' onClick={this.toggleNavList}> Projects </NavLinkMobile>
+            <NavLink href='#projects' onClick={this.toggleNavList}> Projects </NavLink>
           </NavItemMobile>
           <NavItemMobile>
-            <NavLinkMobile href='#about' onClick={this.toggleNavList}> About </NavLinkMobile>
+            <NavLink href='#about' onClick={this.toggleNavList}> About </NavLink>
           </NavItemMobile>
           <NavItemMobile>
-            <NavLinkMobile href='#contact' onClick={this.toggleNavList}> Contact </NavLinkMobile>
+            <NavLink href='#contact' onClick={this.toggleNavList}> Contact </NavLink>
           </NavItemMobile>
         </NavListMobile>
       </Fragment>
