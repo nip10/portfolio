@@ -44,11 +44,8 @@ class Header extends Component<{}, IWrapperProps> {
   }
 
   private handleScrollEvent = () => {
-    if (window.scrollY < 5) {
-      this.setState({ scrolled: false });
-    } else {
-      this.setState({ scrolled: true });
-    }
+    const scrolled = window.scrollY < 5;
+    this.setState({ scrolled });
   }
 
   public componentDidMount = () => {
