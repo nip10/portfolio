@@ -1,11 +1,14 @@
+import api from './../assets/img/projects/api.svg';
+import chat from './../assets/img/projects/chat.png';
+
 export const projects = [
   {
     title: 'Todo api',
     description: 'A RESTful API for managing todo\'s using all CRUD common operations.',
     stack: ['JavaScript', 'Typescript', 'NodeJS', 'Express', 'MongoDB', 'Jest'],
-    image: 'https://via.placeholder.com/400x400',
+    image: api,
     repo: 'https://github.com/nip10/todo-api',
-    demo: '',
+    demo: 'https://p.dcdev.pt/todo/api',
   },
   {
     title: 'Todo\'s Manager',
@@ -13,15 +16,15 @@ export const projects = [
     stack: ['HTML5', 'CSS3', 'Typescript', 'React'],
     image: 'https://via.placeholder.com/400x400',
     repo: 'https://github.com/nip10/todo-react-ts',
-    demo: '',
+    demo: 'https://p.dcdev.pt/todo',
   },
   {
     title: 'Chat',
     description: 'Simple chat webapp.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'Express', 'SocketIO'],
-    image: 'https://via.placeholder.com/400x400',
+    image: chat,
     repo: 'https://github.com/nip10/node-chat-app',
-    demo: '',
+    demo: 'https://p.dcdev.pt/chat',
   },
   {
     title: 'Tvshow Manager',
@@ -29,7 +32,7 @@ export const projects = [
     stack: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'PostgreSQL', 'Express', 'SocketIO'],
     image: 'https://via.placeholder.com/400x400',
     repo: 'https://github.com/nip10/tvshows-manager',
-    demo: '',
+    demo: 'https://p.dcdev.pt/tsm',
   },
   {
     title: 'Telegram Bot',
@@ -37,7 +40,6 @@ export const projects = [
     stack: ['Javascript', 'Express', 'NodeJS'],
     image: 'https://via.placeholder.com/400x400',
     repo: 'https://github.com/nip10/telegram-bot',
-    demo: '',
   },
   {
     title: 'Portfolio',
@@ -45,6 +47,6 @@ export const projects = [
     stack: ['Typescript', 'React', 'CSS3'],
     image: 'https://via.placeholder.com/400x400',
     repo: 'https://github.com/nip10/portfolio',
-    demo: '',
+    demo: 'https://dcdev.pt',
   },
 ];
