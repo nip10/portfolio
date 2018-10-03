@@ -1,14 +1,17 @@
-☐ Change Navbar/Header components names
-☐ Max width should be set on the root div, not in every section.
-  const Wrapper = styled.section`
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 12rem;
-  `;
-☐ Merge buttons styles
-☐ Add email to contacts
 ☐ Update readme
-☐ Refactor UI components
+☐ Define stack interface
+  So I can specify it in the IProjectProps
+☐ Fix array key missing error
+  This is caused by react-typing-animation
+✘ Change Navbar/Header components names @cancelled(18-10-03 02:09)
+✔ Refactor UI components @done(18-10-03 00:31)
+  ✔ Make Section component @done(18-10-02 23:50)
+  ✔ Make Button component @done(18-10-03 00:14)
+  ✔ Make title/title container components @done(18-10-03 00:16)
+✔ Delete comments @done(18-10-03 00:16)
+✔ Change title @done(18-10-02 21:09)
+✔ Fix projects demo link @done(18-10-02 21:16)
+✔ Add email to contacts @done(18-10-02 21:09)
 ✔ Remove metadata from svgs @done(18-09-27 22:31)
 ✘ Write some tests ? @cancelled(18-10-01 22:52)
 ✔ Add responsiveness @done(18-10-01 22:52)
