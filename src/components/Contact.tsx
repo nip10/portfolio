@@ -66,41 +66,6 @@ const SocialLink = styled.a`
   }
 `;
 
-const FormLabels = styled.label`
-  display: block;
-  text-align: left;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-`;
-
-const FormInputs = styled.input`
-  display: block;
-  width: 100%;
-  border: none;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
-  height: 2rem;
-  margin-bottom: 1em;
-`;
-
-const FormTextarea = styled.textarea`
-  display: block;
-  width: 100%;
-  border: none;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
-`;
-
-const FormSubmitButton = styled.button`
-  background-color: #8A74F7;
-  padding: 1em 2em;
-  color: white;
-  float: right;
-  border: none;
-  font-weight: 700;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
-  cursor: pointer;
-  margin-top: 1em;
-`;
-
 const Anchor = styled.a`
   display: block;
   position: relative;
@@ -111,13 +76,6 @@ const Anchor = styled.a`
 const SocialImg = styled.img`
   max-width: 50px;
   width: 100%;
-`;
-
-const Form = styled.form`
-  grid-area: "form";
-  @media (max-width: 1024px) {
-    margin-top: 3rem;
-  }
 `;
 
 const Contact = () => {
@@ -138,17 +96,7 @@ const Contact = () => {
             <SocialLink href="https://www.linkedin.com/in/diogo-cardoso-30a065159/" target="_blank" rel="noopener noreferrer"> Linkedin </SocialLink>
           </SocialListItems>
         </SocialList>
-        <Form action="">
-          <FormLabels htmlFor="name"> Name: </FormLabels>
-          <FormInputs type="text" id="name" />
-          <FormLabels htmlFor="email"> Email: </FormLabels>
-          <FormInputs type="email" id="email" required={true} />
-          <FormLabels htmlFor="message"> Message: </FormLabels>
-          <FormTextarea id="message" rows={5} defaultValue="This feature is not implemented yet. If you want to reach out, contact me via Linkedin." required={true} />
-          <FormSubmitButton type="submit" disabled={true}> Submit </FormSubmitButton>
-        </Form>
-      </ContentWrapper>
-    </Wrapper >
+    </ Section>
   );
 };
 
