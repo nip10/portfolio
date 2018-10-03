@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 import Typing from 'react-typing-animation';
 import MediaQuery from 'react-responsive';
-import { particlesCfgMobile, particlesCfgDesktop, particlesStyle } from '../config/index';
+import { particlesCfgMobile, particlesCfgDesktop, particlesStyle } from '../config';
 
 const HeroContainer = styled.section`
   background-color: #747FE0;
@@ -48,7 +48,7 @@ const Hero = () => (
               <br />
               <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
               <br />
-              <span>Currently in the final-year of a master's degree in Electrical and Computers Engineering at FEUP.</span>
+              <span>Currently in the final-year of a master's degree in Electrical and Computer Engineering at FEUP.</span>
             </Typing>
             : <Typing>
               <span>Hi, I'm <strong>Diogo</strong>.</span>
