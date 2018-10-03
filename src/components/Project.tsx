@@ -30,6 +30,7 @@ const Wrapper = styled.div`
 
 const ImgWrapper = styled.div`
   grid-area: img;
+  position: relative;
   @media (max-width: 1024px) {
     display: none;
   }
@@ -37,8 +38,14 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
   display: block;
-  max-height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
   max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const TextWrapper = styled.div`
