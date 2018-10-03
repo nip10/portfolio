@@ -33,6 +33,8 @@ const Title = styled.a`
   margin: 0;
   padding: 0;
   font-weight: 700;
+  text-decoration: none;
+  color: black;
 `;
 
 class Header extends Component<{}, IWrapperProps> {
@@ -59,7 +61,7 @@ class Header extends Component<{}, IWrapperProps> {
   public render() {
     return (
       <Wrapper scrolled={this.state.scrolled}>
-        <Title> > Diogo Cardoso </Title>
+        <Title href='#top'> > Diogo Cardoso </Title>
         <Navbar />
       </Wrapper>
     );
