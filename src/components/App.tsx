@@ -13,8 +13,8 @@ injectGlobal`
   ${styledNormalize}
   body {
     background-color: #F6F9FC;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-display: swap;
     box-sizing: border-box;
   }
 `;
