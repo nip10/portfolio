@@ -43,14 +43,14 @@ const Hero = () => (
       <MediaQuery minWidth={1024}>
         {matches => {
           return matches
-            ? <Typing>
+            ? <Typing speed={30}>
               <span>Hi, I'm <strong>Diogo</strong>.</span>
               <br />
               <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
               <br />
               <span>Currently in the final-year of a master's degree in Electrical and Computer Engineering at FEUP.</span>
             </Typing>
-            : <Typing>
+            : <Typing speed={30}>
               <span>Hi, I'm <strong>Diogo</strong>.</span>
               <br />
               <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
