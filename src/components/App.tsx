@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle  } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import Header from './Header';
 import Hero from './Hero';
@@ -9,7 +9,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 
 // tslint:disable-next-line:no-unused-expression
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
   body {
     background-color: #F6F9FC;
@@ -29,6 +29,7 @@ class App extends Component {
         <About />
         <Contact />
         <Footer />
+        <GlobalStyle/>
       </Fragment>
     );
   }
