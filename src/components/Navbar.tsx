@@ -46,7 +46,7 @@ const NavLink = styled.a`
 
 const NavListMobile = styled.ul`
   list-style: none;
-  display: ${(props: INavListMobileProps) => props.toggle ? 'block' : 'none'};
+  display: ${(props: INavBarState) => props.toggle ? 'block' : 'none'};
   margin: 0;
   padding: 0;
   padding-top: 1rem;
@@ -62,10 +62,6 @@ const NavItemMobile = styled.li`
 `;
 
 interface INavBarState {
-  toggle: boolean,
-}
-
-interface INavListMobileProps {
   toggle: boolean,
 }
 
