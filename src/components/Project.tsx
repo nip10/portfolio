@@ -85,9 +85,10 @@ const ButtonWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  font-weight: normal;
 `;
 
 const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, repo, demo }) => {

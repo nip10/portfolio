@@ -17,8 +17,9 @@ const NavItem = styled.li`
   margin: 0;
   padding: 0;
   height: 25px;
+  box-sizing: border-box;
   :hover {
-    border-bottom: 2px solid #A66FED;
+    border-bottom: 2px solid rgba(166, 111, 237, 0.7);
   }
 `;
 
@@ -28,6 +29,11 @@ const NavLink = styled.a`
   text-decoration: none;
   color: black;
   vertical-align: middle;
+  font-family: 'Open Sans';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  height: 25px;
+  line-height: 25px;
   :before {
     color: #A66FED;
     content: "{"

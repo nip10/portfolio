@@ -29,10 +29,9 @@ const Wrapper = styled.nav<IWrapperProps>`
 
 const Title = styled.a`
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
-  font-weight: 700;
   text-decoration: none;
   color: black;
 `;
