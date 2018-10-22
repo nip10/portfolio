@@ -1,6 +1,7 @@
 import api from './../assets/img/projects/api.svg';
 import chat from './../assets/img/projects/chat.png';
 import todo from './../assets/img/projects/todo.png';
+import tsm from './../assets/img/projects/tsm.png';
 import portfolio from './../assets/img/projects/portfolio.png';
 
 export const projects = [
@@ -32,7 +33,7 @@ export const projects = [
     title: 'Tvshow Manager',
     description: 'Manage your favourite tvshows and discover new ones. Relies on the TheTVDB API to get tvshow\'s information.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'PostgreSQL', 'Express', 'SocketIO'],
-    image: 'https://via.placeholder.com/400x400',
+    image: tsm,
     repo: 'https://github.com/nip10/tvshows-manager',
     demo: 'https://p.dcdev.pt/tsm',
   },
