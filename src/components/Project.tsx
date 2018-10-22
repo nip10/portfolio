@@ -95,7 +95,7 @@ const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, r
   return (
     <Wrapper>
       <ImgWrapper>
-        <Img src={image} alt='todo: project name image' />
+        <Img src={image} alt={`${title} image`}/>
       </ImgWrapper>
       <TextWrapper>
         <Title> {title} </Title>
