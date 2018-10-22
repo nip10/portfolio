@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import Navbar from './Navbar';
 
-interface IWrapperProps {
+interface IWrapperState {
   scrolled: boolean
 }
 
-const Wrapper = styled.nav<IWrapperProps>`
+const Wrapper = styled.nav<IWrapperState>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +36,7 @@ const Title = styled.a`
   color: black;
 `;
 
-class Header extends Component<{}, IWrapperProps> {
+class Header extends Component<{}, IWrapperState> {
   constructor(props: {}) {
     super(props);
     this.state = {
