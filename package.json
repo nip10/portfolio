@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dcdev.pt",
+  "homepage": "https://diogocardoso.me",
   "dependencies": {
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
