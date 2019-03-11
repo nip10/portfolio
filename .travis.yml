@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '10'
+  - "10"
 sudo: false
 cache:
   yarn: true
@@ -19,5 +19,6 @@ deploy:
   skip_cleanup: true
   region: eu-west-2
   local_dir: build
+  upload_dir: old
 notifications:
   email: false
