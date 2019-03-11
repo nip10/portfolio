@@ -1,3 +1,8 @@
+☐ Add metatags
+  og:title was not found. Example: <meta property="og:title" content="Rich Link Preview" />
+  og:description was not found. Example: <meta property="og:description" content="Also want these pretty website previews?" />
+  og:image was not found. Example: <meta property="og:image" content="https://richpreview.com/richpreview.png" />
+☐ Add 512x512 192x192 icons to manifest
 ☐ Test vertical responsiveness
 ☐ Update readme
 ☐ Fix array key missing error
