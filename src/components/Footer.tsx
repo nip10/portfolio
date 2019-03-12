@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   width: 100%;
@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   height: 50px;
   margin: 7rem auto 0 auto;
   text-align: center;
-  background-color: #F6F9FC;
+  background-color: #f6f9fc;
   box-sizing: border-box;
   @media (max-width: 1024px) {
     margin-top: 4rem;

@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from 'react';
-import { createGlobalStyle  } from 'styled-components';
-import styledNormalize from 'styled-normalize';
-import Header from './Header';
-import Hero from './Hero';
-import Projects from './Projects';
-import About from './About';
-import Contact from './Contact';
-import Footer from './Footer';
+import React, { Component, Fragment } from "react";
+import { createGlobalStyle } from "styled-components";
+import styledNormalize from "styled-normalize";
+import Header from "./Header";
+import Hero from "./Hero";
+import Projects from "./Projects";
+import About from "./About";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 // tslint:disable-next-line:no-unused-expression
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +28,7 @@ class App extends Component {
         <About />
         <Contact />
         <Footer />
-        <GlobalStyle/>
+        <GlobalStyle />
       </Fragment>
     );
   }

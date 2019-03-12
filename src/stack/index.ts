@@ -1,75 +1,75 @@
 const frontEnd = [
   {
-    name: 'HTML5',
+    name: "HTML5"
   },
   {
-    name: 'CSS3',
+    name: "CSS3"
   },
   {
-    name: 'Sass',
+    name: "Sass"
   },
   {
-    name: 'React',
-    alias: 'r',
+    name: "React",
+    alias: "r"
   },
   {
-    name: 'Redux',
+    name: "Redux"
   },
   {
-    name: 'SocketIO',
-  },
+    name: "SocketIO"
+  }
 ];
 
 const backEnd = [
   {
-    name: 'NodeJS',
+    name: "NodeJS"
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB"
   },
   {
-    name: 'PostgreSQL',
+    name: "PostgreSQL"
   },
   {
-    name: 'Redis',
-  },
+    name: "Redis"
+  }
 ];
 
 const languages = [
   {
-    name: 'JavaScript',
+    name: "JavaScript"
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript"
   },
   {
-    name: 'C++',
-    alias: 'cplusplus',
+    name: "C++",
+    alias: "cplusplus"
   },
   {
-    name: 'Matlab',
-  },
+    name: "Matlab"
+  }
 ];
 
 const tools = [
   {
-    name: 'Git',
+    name: "Git"
   },
   {
-    name: 'npm',
+    name: "npm"
   },
   {
-    name: 'Yarn',
+    name: "Yarn"
   },
   {
-    name: 'Gulp',
+    name: "Gulp"
   },
   {
-    name: 'Webpack',
+    name: "Webpack"
   },
   {
-    name: 'Jest',
-  },
+    name: "Jest"
+  }
 ];
 
 export default { frontEnd, backEnd, tools, languages };

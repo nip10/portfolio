@@ -1,20 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Button, ButtonImg } from './UI/index';
-import extlink from './../assets/img/icons/external-link.svg';
-import github from './../assets/img/icons/github_btn.svg';
+import React from "react";
+import styled from "styled-components";
+import { Button, ButtonImg } from "./UI/index";
+import extlink from "./../assets/img/icons/external-link.svg";
+import github from "./../assets/img/icons/github_btn.svg";
 
 interface IProjectProps {
-  title: string,
-  description: string,
-  stack: string[],
-  image: string,
-  repo: string,
-  demo?: string,
-};
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;
+  repo: string;
+  demo?: string;
+}
 
 const Wrapper = styled.div`
-  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
   margin: 3em 0;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -71,7 +71,7 @@ const TagsList = styled.ul`
 
 const TagsItem = styled.li`
   display: inline-block;
-  border: 1px solid #74A4F7;
+  border: 1px solid #74a4f7;
   padding: 0.5em 1em;
   margin: 0.5em 1em 0 0;
   font-size: 0.85em;
@@ -91,31 +91,50 @@ const Title = styled.h2`
   font-weight: normal;
 `;
 
-const Project: React.SFC<IProjectProps> = ({ title, description, stack, image, repo, demo }) => {
+const Project: React.SFC<IProjectProps> = ({
+  title,
+  description,
+  stack,
+  image,
+  repo,
+  demo
+}) => {
   return (
     <Wrapper>
       <ImgWrapper>
-        <Img src={image} alt={`${title} image`}/>
+        <Img src={image} alt={`${title} image`} />
       </ImgWrapper>
       <TextWrapper>
         <Title> {title} </Title>
         <Description> {description} </Description>
         <TagsList>
-          {stack.map((el, i) => <TagsItem key={i}> {el} </TagsItem>)}
+          {stack.map((el, i) => (
+            <TagsItem key={i}> {el} </TagsItem>
+          ))}
         </TagsList>
         <ButtonWrapper>
-          {demo &&
-            <Button type={'primary'} href={demo} target="_blank" rel="noopener noreferrer">
+          {demo && (
+            <Button
+              type={"primary"}
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span> Demo </span>
               <ButtonImg left={0.5} src={extlink} alt="external link icon" />
             </Button>
-          }
-          {repo &&
-            <Button type={'secondary'} href={repo} target="_blank" rel="noopener noreferrer">
+          )}
+          {repo && (
+            <Button
+              type={"secondary"}
+              href={repo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ButtonImg right={0.5} src={github} alt="github logo" />
               <span> Source </span>
             </Button>
-          }
+          )}
         </ButtonWrapper>
       </TextWrapper>
     </Wrapper>

@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
-import MenuIcon from './MenuIcon';
+import React, { Component, Fragment } from "react";
+import styled from "styled-components";
+import MediaQuery from "react-responsive";
+import MenuIcon from "./MenuIcon";
 
 const NavList = styled.ul`
   float: right;
@@ -29,24 +29,24 @@ const NavLink = styled.a`
   text-decoration: none;
   color: black;
   vertical-align: middle;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 0.9rem;
   text-transform: uppercase;
   height: 25px;
   line-height: 25px;
   :before {
-    color: #A66FED;
-    content: "{"
+    color: #a66fed;
+    content: "{";
   }
   :after {
-    color: #A66FED;
-    content: "}"
+    color: #a66fed;
+    content: "}";
   }
 `;
 
 const NavListMobile = styled.ul`
   list-style: none;
-  display: ${(props: INavBarState) => props.toggle ? 'block' : 'none'};
+  display: ${(props: INavBarState) => (props.toggle ? "block" : "none")};
   margin: 0;
   padding: 0;
   padding-top: 1rem;
@@ -62,20 +62,20 @@ const NavItemMobile = styled.li`
 `;
 
 interface INavBarState {
-  toggle: boolean,
+  toggle: boolean;
 }
 
 class Navbar extends Component<{}, INavBarState> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      toggle: false,
-    }
+      toggle: false
+    };
   }
 
   private toggleNavList = () => {
-    this.setState((prevState) => ({ toggle: !prevState.toggle }))
-  }
+    this.setState(prevState => ({ toggle: !prevState.toggle }));
+  };
 
   private navMobile = () => {
     return (
@@ -83,13 +83,22 @@ class Navbar extends Component<{}, INavBarState> {
         <MenuIcon toggleNavList={this.toggleNavList} />
         <NavListMobile toggle={this.state.toggle}>
           <NavItemMobile>
-            <NavLink href='#projects' onClick={this.toggleNavList}> Projects </NavLink>
+            <NavLink href="#projects" onClick={this.toggleNavList}>
+              {" "}
+              Projects{" "}
+            </NavLink>
           </NavItemMobile>
           <NavItemMobile>
-            <NavLink href='#about' onClick={this.toggleNavList}> About </NavLink>
+            <NavLink href="#about" onClick={this.toggleNavList}>
+              {" "}
+              About{" "}
+            </NavLink>
           </NavItemMobile>
           <NavItemMobile>
-            <NavLink href='#contact' onClick={this.toggleNavList}> Contact </NavLink>
+            <NavLink href="#contact" onClick={this.toggleNavList}>
+              {" "}
+              Contact{" "}
+            </NavLink>
           </NavItemMobile>
         </NavListMobile>
       </Fragment>
@@ -100,25 +109,23 @@ class Navbar extends Component<{}, INavBarState> {
     return (
       <NavList>
         <NavItem>
-          <NavLink href='#projects'> Projects </NavLink>
+          <NavLink href="#projects"> Projects </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#about'> About </NavLink>
+          <NavLink href="#about"> About </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href='#contact'> Contact </NavLink>
+          <NavLink href="#contact"> Contact </NavLink>
         </NavItem>
       </NavList>
     );
-  }
+  };
 
   public render() {
     return (
       <MediaQuery minWidth={1024}>
         {matches => {
-          return matches
-            ? this.navDesktop()
-            : this.navMobile()
+          return matches ? this.navDesktop() : this.navMobile();
         }}
       </MediaQuery>
     );

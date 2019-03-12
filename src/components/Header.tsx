@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import styled from "styled-components";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
 
 interface IWrapperState {
-  scrolled: boolean
+  scrolled: boolean;
 }
 
 const Wrapper = styled.nav<IWrapperState>`
@@ -17,9 +17,12 @@ const Wrapper = styled.nav<IWrapperState>`
   left: 0;
   right: 0;
   height: 70px;
-  background-color: #F6F9FC;
+  background-color: #f6f9fc;
   box-sizing: border-box;
-  box-shadow: ${p => (p.scrolled ? '0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)' : 'none')};
+  box-shadow: ${p =>
+    p.scrolled
+      ? "0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12)"
+      : "none"};
   flex-wrap: wrap;
   @media (max-width: 1024px) {
     padding: 1rem;
@@ -40,27 +43,27 @@ class Header extends Component<{}, IWrapperState> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      scrolled: false,
+      scrolled: false
     };
   }
 
   private handleScrollEvent = () => {
     const scrolled = window.scrollY > 5;
     this.setState({ scrolled });
-  }
+  };
 
   public componentDidMount = () => {
-    document.addEventListener('scroll', this.handleScrollEvent);
-  }
+    document.addEventListener("scroll", this.handleScrollEvent);
+  };
 
   public componentWillUnmount = () => {
-    document.removeEventListener('scroll', this.handleScrollEvent);
-  }
+    document.removeEventListener("scroll", this.handleScrollEvent);
+  };
 
   public render() {
     return (
       <Wrapper scrolled={this.state.scrolled}>
-        <Title href='#top'> > Diogo Cardoso </Title>
+        <Title href="#top"> > Diogo Cardoso </Title>
         <Navbar />
       </Wrapper>
     );

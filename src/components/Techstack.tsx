@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import MediaQuery from 'react-responsive';
+import React from "react";
+import styled from "styled-components";
+import MediaQuery from "react-responsive";
 
-import * as StackImgs from './../assets/img/stack';
-import stack from './../stack';
+import * as StackImgs from "./../assets/img/stack";
+import stack from "./../stack";
 
 const Img = styled.img`
   max-width: 100px;
@@ -23,7 +23,7 @@ const StackRow = styled.div`
 
 const BulletEnt = styled.span`
   margin-right: 5px;
-  color: #A66FED;
+  color: #a66fed;
 `;
 
 const ImgOverlay = styled.div`
@@ -31,11 +31,11 @@ const ImgOverlay = styled.div`
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: #008cba;
   overflow: hidden;
   width: 100%;
-  height:0;
-  transition: .5s ease;
+  height: 0;
+  transition: 0.5s ease;
 `;
 
 const ImgContainer = styled.div`
@@ -77,14 +77,34 @@ const TechStackMobile = () => {
   return (
     <StackWrapper>
       <h3> Technical Skills </h3>
-      <StackList> <BulletEnt>&bull;</BulletEnt> Languages </StackList>
-      {stack.languages.map((el, i) => <StackListItem key={i}> {el.name} </StackListItem>)}
-      <StackList> <BulletEnt>&bull;</BulletEnt> Front-end </StackList>
-      {stack.frontEnd.map((el, i) => <StackListItem key={i}> {el.name} </StackListItem>)}
-      <StackList> <BulletEnt>&bull;</BulletEnt> Back-end </StackList>
-      {stack.backEnd.map((el, i) => <StackListItem key={i}> {el.name} </StackListItem>)}
-      <StackList> <BulletEnt>&bull;</BulletEnt> Tools </StackList>
-      {stack.tools.map((el, i) => <StackListItem key={i}> {el.name} </StackListItem>)}
+      <StackList>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Languages{" "}
+      </StackList>
+      {stack.languages.map((el, i) => (
+        <StackListItem key={i}> {el.name} </StackListItem>
+      ))}
+      <StackList>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Front-end{" "}
+      </StackList>
+      {stack.frontEnd.map((el, i) => (
+        <StackListItem key={i}> {el.name} </StackListItem>
+      ))}
+      <StackList>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Back-end{" "}
+      </StackList>
+      {stack.backEnd.map((el, i) => (
+        <StackListItem key={i}> {el.name} </StackListItem>
+      ))}
+      <StackList>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Tools{" "}
+      </StackList>
+      {stack.tools.map((el, i) => (
+        <StackListItem key={i}> {el.name} </StackListItem>
+      ))}
     </StackWrapper>
   );
 };
@@ -93,44 +113,76 @@ const TechStackDesktop = () => {
   return (
     <StackWrapper>
       <h3> Technical Skills </h3>
-      <h4> <BulletEnt>&bull;</BulletEnt> Languages </h4>
+      <h4>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Languages{" "}
+      </h4>
       <StackRow>
         {stack.languages.map((el, i) => (
           <ImgContainer key={i}>
-            <Img src={StackImgs[el.alias ? el.alias.toLowerCase() : el.name.toLowerCase()]} alt={`${el.name.toLowerCase()} logo`} />
+            <Img
+              src={
+                StackImgs[
+                  el.alias ? el.alias.toLowerCase() : el.name.toLowerCase()
+                ]
+              }
+              alt={`${el.name.toLowerCase()} logo`}
+            />
             <ImgOverlay>
               <ImgOverlayText> {el.name} </ImgOverlayText>
             </ImgOverlay>
           </ImgContainer>
         ))}
       </StackRow>
-      <h4> <BulletEnt>&bull;</BulletEnt> Front-end </h4>
+      <h4>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Front-end{" "}
+      </h4>
       <StackRow>
         {stack.frontEnd.map((el, i) => (
           <ImgContainer key={i}>
-            <Img src={StackImgs[el.alias ? el.alias.toLowerCase() : el.name.toLowerCase()]} alt={`${el.name.toLowerCase()} logo`} />
+            <Img
+              src={
+                StackImgs[
+                  el.alias ? el.alias.toLowerCase() : el.name.toLowerCase()
+                ]
+              }
+              alt={`${el.name.toLowerCase()} logo`}
+            />
             <ImgOverlay>
               <ImgOverlayText> {el.name} </ImgOverlayText>
             </ImgOverlay>
           </ImgContainer>
         ))}
       </StackRow>
-      <h4> <BulletEnt>&bull;</BulletEnt> Back-end </h4>
+      <h4>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Back-end{" "}
+      </h4>
       <StackRow>
         {stack.backEnd.map((el, i) => (
           <ImgContainer key={i}>
-            <Img src={StackImgs[el.name.toLowerCase()]} alt={`${el.name.toLowerCase()} logo`} />
+            <Img
+              src={StackImgs[el.name.toLowerCase()]}
+              alt={`${el.name.toLowerCase()} logo`}
+            />
             <ImgOverlay>
               <ImgOverlayText> {el.name} </ImgOverlayText>
             </ImgOverlay>
           </ImgContainer>
         ))}
       </StackRow>
-      <h4> <BulletEnt>&bull;</BulletEnt> Tools </h4>
+      <h4>
+        {" "}
+        <BulletEnt>&bull;</BulletEnt> Tools{" "}
+      </h4>
       <StackRow>
         {stack.tools.map((el, i) => (
           <ImgContainer key={i}>
-            <Img src={StackImgs[el.name.toLowerCase()]} alt={`${el.name.toLowerCase()} logo`} />
+            <Img
+              src={StackImgs[el.name.toLowerCase()]}
+              alt={`${el.name.toLowerCase()} logo`}
+            />
             <ImgOverlay>
               <ImgOverlayText> {el.name} </ImgOverlayText>
             </ImgOverlay>
@@ -145,9 +197,7 @@ const Techstack = () => {
   return (
     <MediaQuery minWidth={1024}>
       {matches => {
-        return matches
-          ? TechStackDesktop()
-          : TechStackMobile()
+        return matches ? TechStackDesktop() : TechStackMobile();
       }}
     </MediaQuery>
   );

@@ -1,12 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import Particles from 'react-particles-js';
-import Typing from 'react-typing-animation';
-import MediaQuery from 'react-responsive';
-import { particlesCfgMobile, particlesCfgDesktop, particlesStyle } from '../config';
+import React from "react";
+import styled from "styled-components";
+import Particles from "react-particles-js";
+import Typing from "react-typing-animation";
+import MediaQuery from "react-responsive";
+import {
+  particlesCfgMobile,
+  particlesCfgDesktop,
+  particlesStyle
+} from "../config";
 
 const HeroContainer = styled.section`
-  background-color: #747FE0;
+  background-color: #747fe0;
   position: relative;
   margin-top: 100px;
   box-sizing: border-box;
@@ -34,27 +38,44 @@ const Hero = () => (
   <HeroContainer>
     <MediaQuery minWidth={1024}>
       {matches => {
-        return matches
-          ? <Particles style={particlesStyle} params={particlesCfgDesktop} />
-          : <Particles style={particlesStyle} params={particlesCfgMobile} />
+        return matches ? (
+          <Particles style={particlesStyle} params={particlesCfgDesktop} />
+        ) : (
+          <Particles style={particlesStyle} params={particlesCfgMobile} />
+        );
       }}
     </MediaQuery>
     <HeroOverlay>
       <MediaQuery minWidth={1024}>
         {matches => {
-          return matches
-            ? <Typing speed={30}>
-              <span>Hi, I'm <strong>Diogo</strong>.</span>
+          return matches ? (
+            <Typing speed={30}>
+              <span>
+                Hi, I'm <strong>Diogo</strong>.
+              </span>
               <br />
-              <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
+              <span>
+                I'm a <strong>full-stack JavaScript web developer</strong>.
+                Based in Porto, Portugal.
+              </span>
               <br />
-              <span>Currently in the final-year of a master's degree in Electrical and Computer Engineering at FEUP.</span>
+              <span>
+                Currently in the final-year of a master's degree in Electrical
+                and Computer Engineering at FEUP.
+              </span>
             </Typing>
-            : <Typing speed={30}>
-              <span>Hi, I'm <strong>Diogo</strong>.</span>
+          ) : (
+            <Typing speed={30}>
+              <span>
+                Hi, I'm <strong>Diogo</strong>.
+              </span>
               <br />
-              <span>I'm a <strong>full-stack JavaScript web developer</strong>. Based in Porto, Portugal.</span>
+              <span>
+                I'm a <strong>full-stack JavaScript web developer</strong>.
+                Based in Porto, Portugal.
+              </span>
             </Typing>
+          );
         }}
       </MediaQuery>
     </HeroOverlay>

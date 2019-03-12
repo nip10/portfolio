@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Stripe = styled.div`
   width: 35px;
@@ -9,7 +9,7 @@ const Stripe = styled.div`
 `;
 
 interface IMenuIconProps {
-  toggleNavList: () => void,
+  toggleNavList: () => void;
 }
 
 const MenuIcon: React.SFC<IMenuIconProps> = ({ toggleNavList }) => {
